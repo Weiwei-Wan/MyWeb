@@ -3,3 +3,15 @@ description: Record my life and learning
 theme: just-the-docs
 
 url: https://Weiwei-Wan.github.io
+
+# Friends
+friends: [
+    {
+        title: "Pooki",
+        href: "https://bingqixia.github.io"
+    },
+    {
+        title: "siuyunyip",
+        href: "https://siuyunyip.github.io/"
+    }
+]
