@@ -4,6 +4,9 @@ theme: just-the-docs
 
 url: https://Weiwei-Wan.github.io
 
+logo: "/assets/images/logo.png"
+favicon_ico: "/assets/images/logo.png"
+
 # Aux links for the upper right navigation
 aux_links:
   "GitHub":
