@@ -40,14 +40,3 @@ compress_html:
   # ignore:
   #   envs: all
 
-# Friends
-friends: [
-    {
-        title: "Pooki",
-        href: "https://bingqixia.github.io"
-    },
-    {
-        title: "siuyunyip",
-        href: "https://siuyunyip.github.io/"
-    }
-]
