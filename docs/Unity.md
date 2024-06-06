@@ -18,12 +18,14 @@ nav_order: 2
 ---
 
 ## Camera projection
+
 1. Perspective projection
 2. Orthographic projection
 
 ---
 
 ## Light
+
 1. Directional light (sun)
 2. Point light (bulb)
 3. Spot light
@@ -32,17 +34,20 @@ nav_order: 2
 ---
 
 ## What's a REST API
+
 It's a way to send and receive information formatted as JSON to a server using HTTP requests.
 
 ---
 
 ## Difference between Update and FixedUpdate
+
 Update runs once per frame. FixedUpdate run per fixed time, depending on how many physics frames per second are set in the time settings, and how fast/slow the framerate is.
 It's for this reason that FixedUpdate should be used when applying forces, torques, or other physics-related functions - because you know it will be executed exactly in sync with the physics engine itself. Whereas Update() can vary out of step with the physics engine, either faster or slower, depending on how much of a load the graphics are putting on the rendering engine at any given time.
 
 ---
 
 ## What's design pattern
+
 A design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. It is a template or blueprint for solving a particular design problem in a way that is both effective and efficient. Design patterns can speed up the development process by providing tested, proven development paradigms.
 In the context of game development with Unity, there are several commonly used design patterns. Here are a few examples: Singleton Pattern, Observer Pattern, Factory Method Pattern, Command Pattern, State Pattern, Decorator Pattern, Strategy Pattern, Component Pattern
 
@@ -67,6 +72,26 @@ In short, the GPU graphics (processing) pipeline completes the following work:
 diffuse = Kd x colorLight x max(N*L,0)
 
 Kd is the diffuse reflection coefficient, colorLight is the color of the light, N is the unit normal vector, L is the unit vector pointing from the point to the light source, where N is the dot multiplied by L, if the result is less than or equal to 0, the diffuse reflection is 0.
+
+---
+
+## Render pipelines
+
+A render pipeline follows these steps:
+
+1. Culling, where the pipeline decides which objects from the scene to display. This usually means it removes objects that are outside the camera view (frustum culling) or hidden behind other objects (occlusion culling).
+
+2. Rendering, where the pipeline draws the objects with their correct lighting into pixel buffers.
+
+3. Post-processing, where the pipeline modifies the pixel buffers to generate the final output frame for the display. Example of modifications include color grading, bloom, and depth of field.
+
+Pre-built render pipelines in Unity:
+
+- The Built-In Render Pipeline is Unity’s default render pipeline. It’s a general purpose render pipeline with limited options for customization.
+
+- The Universal Render Pipeline (URP) is a Scriptable Render Pipeline that you can customize. It lets you create scalable graphics across a wide range of platforms.
+
+- The High Definition Render Pipeline (HDRP) is a Scriptable Render Pipeline that lets you create cutting-edge, high-fidelity graphics on high-end platforms.
 
 ---
 
